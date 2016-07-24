@@ -42,6 +42,5 @@ C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\System.Web.Webpages.De
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\System.Web.Webpages.Razor.xml
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\System.Web.Helpers.xml
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\System.Web.Mvc.xml
-C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.csprojResolveAssemblyReference.cache
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.dll
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.pdb
