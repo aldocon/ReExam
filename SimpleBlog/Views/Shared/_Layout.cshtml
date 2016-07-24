@@ -1,4 +1,5 @@
-﻿@{
+﻿@using System.Web.Optimization
+@{
     Layout = null;
 }
 
@@ -6,41 +7,48 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width"/>
     <title>@ViewBag.Title - SimpleBlog</title>
 </head>
+
+@Styles.Render("~/styles")
+
 <body>
-    <header>
-        <h1>
-            <a href="@Url.RouteUrl("home")">Simple Blog</a>
-        </h1>
+<header>
+    <h1>
+        <a href="@Url.RouteUrl("home")">Simple Blog</a>
+        <i class="glyphicon-bell"></i>
+    </h1>
 
 
-        @if (User.Identity.IsAuthenticated)
+    @if (User.Identity.IsAuthenticated)
+    {
+        <p>Welcome back, @User.Identity.Name</p>
+        <a href="@Url.RouteUrl("Logout")">Logout</a>
+
+        if (User.IsInRole("admin"))
         {
-            <p>Welcome back, @User.Identity.Name</p>
-            <a href="@Url.RouteUrl("Logout")">Logout</a>
-
-            if (User.IsInRole("admin"))
-            {
-                <a href="@Url.Action("index", "Posts", new {area = "admin"})">View posts in admin</a>
-            }
-
-        }
-        else
-        {
-            <a href="@Url.RouteUrl("login")">Login</a>
-
+            <a href="@Url.Action("index", "Posts", new {area = "admin"})">View posts in admin</a>
         }
 
-    </header>
+    }
+    else
+    {
+        <a href="@Url.RouteUrl("login")">Login</a>
 
-    @RenderBody()
+    }
+
+</header>
+
+
+
+@RenderBody()
 
 <footer>
     &copy; @DateTime.UtcNow.Year - me
 </footer>
 
+    @Scripts.Render("~/scripts")
     @RenderSection("Scripts", false)
 
 </body>

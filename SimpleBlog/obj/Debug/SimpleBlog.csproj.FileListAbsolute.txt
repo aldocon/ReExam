@@ -44,4 +44,10 @@ C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\System.Web.Helpers.xml
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\System.Web.Mvc.xml
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.dll
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.pdb
-C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.csprojResolveAssemblyReference.cache
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\Antlr3.Runtime.dll
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\Newtonsoft.Json.dll
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\System.Web.Optimization.dll
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\WebGrease.dll
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\Antlr3.Runtime.pdb
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\Newtonsoft.Json.xml
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\System.Web.Optimization.xml
