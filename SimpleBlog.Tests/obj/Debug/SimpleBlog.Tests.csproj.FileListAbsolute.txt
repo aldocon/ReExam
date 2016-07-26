@@ -46,3 +46,6 @@ C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\obj\Debug\SimpleBlog
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\SimpleBlog.Tests.dll.config
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\System.Web.Optimization.dll
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\FluentMigrator.dll
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\FluentMigrator.pdb
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\FluentMigrator.xml
