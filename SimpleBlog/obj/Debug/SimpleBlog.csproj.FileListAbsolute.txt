@@ -54,4 +54,9 @@ C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\System.Web.Optimizatio
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\FluentMigrator.dll
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\FluentMigrator.pdb
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\FluentMigrator.xml
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\Iesi.Collections.dll
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\MySql.Data.dll
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\NHibernate.dll
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\Iesi.Collections.xml
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\bin\NHibernate.xml
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.csprojResolveAssemblyReference.cache
