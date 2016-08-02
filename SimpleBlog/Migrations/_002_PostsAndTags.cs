@@ -17,9 +17,9 @@ namespace SimpleBlog.Migrations
                 .WithColumn("user_id").AsInt32().ForeignKey("users", "id")
                 .WithColumn("title").AsString(128)
                 .WithColumn("slug").AsString(128)
-                .WithColumn("created_at").AsDateTime()
+                .WithColumn("created_at").AsDateTime().NotNullable()
                 .WithColumn("updated_at").AsDateTime().NotNullable()
-                .WithColumn("deleted_at").AsDateTime().NotNullable();
+                .WithColumn("deleted_at").AsDateTime();
 
             Create.Table("tags")
                 .WithColumn("id").AsInt32().PrimaryKey().Identity()
