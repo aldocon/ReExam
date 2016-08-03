@@ -22,6 +22,11 @@ namespace SimpleBlog.Models
 
         public virtual IList<Tag> Tag { get; set; }
 
+        public Post()
+        {
+            Tag = new List<Tag>();
+        }
+
         public virtual bool IsDeleted {get { return DeletedAt != null; }}
 
     }

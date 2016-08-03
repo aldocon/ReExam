@@ -48,33 +48,42 @@
                 <div class="panel-body post-tag-editor">
                     <label for="new-tag-name">New Tag:</label>
                     <div class="input-group">
-                        <input id="new-tag-name" type="text" class="new-tag-name form-control" />
+                        <input class="new-tag-name form-control" id="new-tag-name" type="text">
                         <span class="input-group-btn">
-                            <button disabled class="btn btn-primary add-tag-button">Add</button>
+                            <button disabled="" class="btn btn-primary add-tag-button" contenteditable="true">Add</button>
                         </span>
                     </div>
 
                     <ul class="tag-select">
                         <li class="template">
-                            <a href="#" class="name"></a>
+                            <a class="name" href="#"></a>
 
-                            <input type="hidden" class="name-input"/>
-                            <input type="hidden" class="selected-input" />
+                            <input class="name-input" type="hidden">
+                            <input class="selected-input" type="hidden">
 
                         </li>
 
-                        @for (var i = 0; i < Model.Tags.Count; i++)
-                        {
-                            var tag = Model.Tags[i];
+                            <li data-tag="1">
+                                <a href="#">Programming</a>
 
-                            <li data-tag="@tag.Id" class="@(tag.Ischekcked ? "selected" : "")">
-                                <a href="#">@tag.Name</a>
-
-                                <input type="hidden" name="Tags[@(i)].Id" value="@tag.Id"/>
-                                <input type="hidden" name="Tags[@(i)].Name" value="@tag.Name"/>
-                                <input type="hidden" name="Tags[@(i)].Ischekcked" value="@tag.Ischekcked.ToString()" class="selected-input"/>
+                                <input name="Tags[0].Id" type="hidden" value="1">
+                                <input name="Tags[0].Name" type="hidden" value="Programming">
+                                <input name="Tags[0].Ischekcked" class="selected-input" type="hidden" value="False">
                             </li>
-                        }
+                            <li data-tag="2">
+                                <a href="#">Design</a>
+
+                                <input name="Tags[1].Id" type="hidden" value="2">
+                                <input name="Tags[1].Name" type="hidden" value="Design">
+                                <input name="Tags[1].Ischekcked" class="selected-input" type="hidden" value="False">
+                            </li>
+                            <li data-tag="3">
+                                <a href="#">Awesome</a>
+
+                                <input name="Tags[2].Id" type="hidden" value="3">
+                                <input name="Tags[2].Name" type="hidden" value="Awesome">
+                                <input name="Tags[2].Ischekcked" class="selected-input" type="hidden" value="False">
+                            </li>
                     </ul>
                 </div>
             </div>

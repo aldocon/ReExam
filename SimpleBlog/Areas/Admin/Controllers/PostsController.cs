@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using NHibernate.Linq;
 using SimpleBlog.Areas.Admin.ViewModels;
 using SimpleBlog.Infrastructure;
+using SimpleBlog.Infrastructure.Extensions;
 using SimpleBlog.Models;
 
 namespace SimpleBlog.Areas.Admin.Controllers
@@ -80,6 +81,9 @@ namespace SimpleBlog.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(form);
 
+            var selectedTags = ReconsileTags(form.Tags).ToList();
+
+
             Post post;
             if (form.IsNew)
             {
@@ -89,6 +93,11 @@ namespace SimpleBlog.Areas.Admin.Controllers
                     User = Auth.User,
 
                 };
+
+                foreach (var tag in selectedTags)
+                {
+                    post.Tag.Add(tag);
+                }
             }
 
             else
@@ -99,6 +108,14 @@ namespace SimpleBlog.Areas.Admin.Controllers
                     return HttpNotFound();
 
                 post.UpdatedAt = DateTime.UtcNow;
+
+                foreach (var toAdd in selectedTags.Where(t => !post.Tag.Contains(t)))
+                    post.Tag.Add(toAdd);
+
+                foreach (var toRemove in post.Tag.Where(t => !selectedTags.Contains(t)).ToList())
+                    post.Tag.Remove(toRemove);
+
+
 
             }
 
@@ -145,6 +162,34 @@ namespace SimpleBlog.Areas.Admin.Controllers
             post.DeletedAt = null;
             Database.Session.Update(post);
             return RedirectToAction("Index");
+        }
+
+        private IEnumerable<Tag> ReconsileTags(IEnumerable<TagCheckBox> tags)
+        {
+            foreach (var tag in tags.Where(t => t.Ischekcked))
+            {
+                if (tag.Id != null)
+                {
+                    yield return Database.Session.Load<Tag>(tag.Id);
+                    continue;
+                }
+
+                var existingTag = Database.Session.Query<Tag>().FirstOrDefault(t => t.Name == tag.Name);
+                if (existingTag != null)
+                {
+                    yield return existingTag;
+                    continue;
+                }
+
+                var newTag = new Tag
+                {
+                    Name = tag.Name,
+                    Slug = tag.Name.Slugify()
+                };
+
+                Database.Session.Save(newTag);
+                yield return newTag;
+            }
         }
 
     }
