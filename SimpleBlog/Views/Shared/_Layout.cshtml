@@ -7,46 +7,38 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title - SimpleBlog</title>
-</head>
 
-@Styles.Render("~/styles")
+    @Styles.Render("~/styles")
+    </head>
+    <body>
+    <div class="site-header">
+        <header class="container">
+            <h1 class="page-header">
+                <a href="@Url.RouteUrl("Home")">Awesome stuff!</a>
+                <small>a Simple blog powered by ASP.Net MVC</small>
+            </h1>
+        </header>
+    </div>
 
-<body>
-<header>
-    <h1>
-        <a href="@Url.RouteUrl("home")">Simple Blog</a>
-        <i class="glyphicon-bell"></i>
-    </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                @RenderBody()
+            </div>
+            <div class="col-lg-4 sidebar">
+                @Html.Action("Sidebar", "Layout")
+            </div>
+        </div>
 
-
-    @if (User.Identity.IsAuthenticated)
-    {
-        <p>Welcome back, @User.Identity.Name</p>
-        <a href="@Url.RouteUrl("Logout")">Logout</a>
-
-        if (User.IsInRole("admin"))
-        {
-            <a href="@Url.Action("index", "Posts", new {area = "admin"})">View posts in admin</a>
-        }
-
-    }
-    else
-    {
-        <a href="@Url.RouteUrl("login")">Login</a>
-
-    }
-
-</header>
+        <footer>
+            &copy; @DateTime.UtcNow.Year
+        </footer>
+    </div>
 
 
-
-@RenderBody()
-
-<footer>
-    &copy; @DateTime.UtcNow.Year - me
-</footer>
 
     @Scripts.Render("~/scripts")
     @RenderSection("Scripts", false)

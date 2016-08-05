@@ -33,6 +33,7 @@ C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\System.Web
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\NHibernate.dll
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\FluentMigrator.dll
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\BCrypt.Net.dll
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\System.Web.Razor.dll
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\System.Web.WebPages.Razor.dll
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\System.Web.WebPages.dll
@@ -45,6 +46,8 @@ C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\NHibernate
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\FluentMigrator.pdb
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\FluentMigrator.xml
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\BCrypt.Net.pdb
+C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\BCrypt.Net.xml
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\System.Web.Razor.xml
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\System.Web.WebPages.xml
@@ -53,6 +56,3 @@ C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\System.Web
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\obj\Debug\SimpleBlog.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\obj\Debug\SimpleBlog.Tests.dll
 C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\obj\Debug\SimpleBlog.Tests.pdb
-C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\BCrypt.Net.dll
-C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\BCrypt.Net.pdb
-C:\Users\Kenneth\Desktop\NewGit\SimpleBlog\SimpleBlog.Tests\bin\Debug\BCrypt.Net.xml
