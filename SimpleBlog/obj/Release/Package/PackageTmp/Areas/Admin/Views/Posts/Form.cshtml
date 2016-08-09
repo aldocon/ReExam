@@ -1,0 +1,104 @@
+﻿@using System.Web.Optimization
+@model SimpleBlog.Areas.Admin.ViewModels.PostForm
+
+<h1>@(Model.IsNew ? "Create Post" : "Update Post")</h1>
+
+@using (Html.BeginForm("Form", "Posts"))
+{
+    if (!Model.IsNew)
+    {
+        @Html.HiddenFor(f => f.PostId)
+    }
+
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-lg-8">
+            @Html.ValidationSummary()
+
+            <div class="form-group">
+                @Html.LabelFor(f => f.Title)
+                @Html.TextBoxFor(f => f.Title, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(f => f.Slug)
+                @Html.TextBoxFor(f => f.Slug, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(f => f.Content)
+                @Html.TextAreaFor(f => f.Content, new { @class = "form-control" })
+            </div>
+
+
+        </div>
+        <div class="col-lg-4">
+            <div class="panel panel-info">
+                <div class="panel-heading"> Post Actions</div>
+                <div class="panel-body">
+                    <input type="submit" value="@(Model.IsNew ? "Publish Post" : "Update Post")" class="btn btn-success btn-sm" />
+
+                    <a href="@Url.Action("Index")">or cancel</a>
+                </div>
+            </div>
+
+            <div class="panel panel-info">
+                <div class="panel-heading">Tags</div>
+                <div class="panel-body post-tag-editor">
+                    <label for="new-tag-name">New Tag:</label>
+                    <div class="input-group">
+                        <input class="new-tag-name form-control" id="new-tag-name" type="text">
+                        <span class="input-group-btn">
+                            <button disabled="" class="btn btn-primary add-tag-button" contenteditable="true">Add</button>
+                        </span>
+                    </div>
+
+                    <ul class="tag-select">
+                        <li class="template">
+                            <a class="name" href="#"></a>
+
+                            <input class="name-input" type="hidden">
+                            <input class="selected-input" type="hidden">
+
+                        </li>
+
+                            <li data-tag="1">
+                                <a href="#">Programming</a>
+
+                                <input name="Tags[0].Id" type="hidden" value="1">
+                                <input name="Tags[0].Name" type="hidden" value="Programming">
+                                <input name="Tags[0].Ischekcked" class="selected-input" type="hidden" value="False">
+                            </li>
+                            <li data-tag="2">
+                                <a href="#">Design</a>
+
+                                <input name="Tags[1].Id" type="hidden" value="2">
+                                <input name="Tags[1].Name" type="hidden" value="Design">
+                                <input name="Tags[1].Ischekcked" class="selected-input" type="hidden" value="False">
+                            </li>
+                            <li data-tag="3">
+                                <a href="#">Awesome</a>
+
+                                <input name="Tags[2].Id" type="hidden" value="3">
+                                <input name="Tags[2].Name" type="hidden" value="Awesome">
+                                <input name="Tags[2].Ischekcked" class="selected-input" type="hidden" value="False">
+                            </li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+    </div>
+
+}
+
+@section Scripts
+{
+    @Scripts.Render("~/admin/post/scripts")
+    <script src="~/Scripts/ckeditor/ckeditor.js"></script>
+
+    <script>
+        CKEDITOR.replace("Content");
+    </script>
+
+}
